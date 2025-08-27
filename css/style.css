@@ -170,6 +170,56 @@ ul {
     transform: translateY(-3px);
 }
 
+/* Hide sidebar logo on mobile */
+@media (max-width: 991px) {
+    .sidebar .logo {
+        display: none;
+    }
+    
+    .sidebar {
+        padding-top: 30px; /* Adjust padding since logo is hidden */
+    }
+}
+
+/* Mobile Header */
+.mobile-header {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    padding: 10px 0;
+}
+
+.mobile-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.mobile-logo img {
+    height: 35px;
+    width: auto;
+}
+
+.mobile-menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Mobile Menu Button */
 .menu-btn {
     position: fixed;
@@ -516,6 +566,26 @@ ul {
     .about-image {
         max-width: 600px;
         margin: 0 auto;
+    }
+}
+
+@media (max-width: 991px) {
+    .mobile-header {
+        display: block;
+    }
+    
+    /* Adjust sidebar position to be below mobile header */
+    .sidebar {
+        padding-top: 70px;
+    }
+    
+    /* Hide original menu button */
+    .menu-btn {
+        display: none;
+    }
+    
+    .main-content {
+        margin-top: 60px; /* Height of mobile header */
     }
 }
 

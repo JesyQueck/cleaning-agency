@@ -3,6 +3,7 @@ const menuBtn = document.querySelector('.menu-btn');
 const sidebar = document.querySelector('.sidebar');
 const navLinks = document.querySelectorAll('.nav-links a');
 const contactForm = document.getElementById('contactForm');
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 
 // Toggle Sidebar on Mobile
 menuBtn.addEventListener('click', () => {
@@ -89,11 +90,46 @@ window.addEventListener('scroll', () => {
 });
 
 // Initialize AOS (Animate On Scroll)
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
      // You can add AOS initialization here if you include the AOS library
      // AOS.init();
 
-     // Set current year in footer
+     // Mobile menu toggle
+     const body = document.body;
+
+     // Toggle sidebar when mobile menu button is clicked
+     if (mobileMenuToggle) {
+          mobileMenuToggle.addEventListener('click', function () {
+               sidebar.classList.toggle('active');
+               body.classList.toggle('sidebar-active');
+
+               // Toggle between menu and close icon
+               const icon = this.querySelector('i');
+               if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+               }
+          });
+     }
+
+     // Close sidebar when clicking outside on mobile
+     document.addEventListener('click', function (e) {
+          if (window.innerWidth <= 991 &&
+               !sidebar.contains(e.target) &&
+               !mobileMenuToggle.contains(e.target)) {
+               sidebar.classList.remove('active');
+               body.classList.remove('sidebar-active');
+
+               // Reset menu icon
+               const icon = mobileMenuToggle.querySelector('i');
+               if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+               }
+          }
+     });
+
+     // Update year in footer
      const yearElement = document.querySelector('.current-year');
      if (yearElement) {
           yearElement.textContent = new Date().getFullYear();
