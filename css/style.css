@@ -1110,18 +1110,17 @@ ul {
         display: block;
     }
     
-    /* Adjust sidebar position to be below mobile header */
+    
     .sidebar {
         padding-top: 100px;
     }
     
-    /* Hide original menu button */
     .menu-btn {
         display: none;
     }
     
     .main-content {
-        margin-top: 60px; /* Height of mobile header */
+        margin-top: 60px;
     }
 }
 
@@ -1312,8 +1311,6 @@ ul {
 .footer-legal span {
     color: #4d4d4d;
 }
-
-/* Responsive Footer */
 @media (max-width: 992px) {
     .about-container {
         grid-template-columns: 1fr;
