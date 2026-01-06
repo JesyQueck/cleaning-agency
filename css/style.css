@@ -1,6 +1,6 @@
 /* Base Styles & Variables */
 :root {
-    --primary-color: #2c7be5;
+    --primary-color: #3bb0bd;
     --secondary-color: #00d97e;
     --dark-color: #2d3748;
     --text-color: #4a5568;
@@ -104,13 +104,11 @@ ul {
     margin-bottom: 20px;
 }
 
-.logo-img {
-    max-width: 120px;
+.logo img {
+    max-width: 220px;
     height: auto;
-    margin-bottom: 15px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 1.5rem;
 }
 
 .logo h2 {
@@ -204,7 +202,7 @@ ul {
 }
 
 .mobile-logo img {
-    height: 35px;
+    height: 60px;
     width: auto;
 }
 
@@ -564,7 +562,7 @@ ul {
 
 .feature-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
     border-color: var(--primary-color);
 }
 
@@ -1196,8 +1194,8 @@ ul {
 }
 
 .footer-logo img {
-    height: 40px;
-    margin-bottom: 15px;
+    max-width: 240px;
+    margin-bottom: 1.5rem;
 }
 
 .footer-logo p {
