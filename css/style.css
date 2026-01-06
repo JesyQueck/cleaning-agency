@@ -483,55 +483,59 @@ ul {
     padding: 0 20px;
     position: relative;
     max-width: 1200px;
+    border-radius: 12px;
+    padding: 2rem;
 }
 
-.service-card {
+.feature-card {
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
     padding: 2.5rem 2rem;
-    border: 1px solid #f0f0f0;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     height: 100%;
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     border-color: var(--primary-color);
 }
 
-.service-icon {
-    width: 60px;
-    height: 60px;
-    background: rgba(44, 123, 229, 0.1);
-    border-radius: 50%;
-    display: flex;
+.feature-icon {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
-    font-size: 1.5rem;
+    width: 70px;
+    height: 70px;
+    background: rgba(33, 150, 243, 0.1);
+    border-radius: 50%;
+    font-size: 1.8rem;
     color: var(--primary-color);
+    margin: 0 auto 1.5rem;
     transition: all 0.3s ease;
 }
 
-.service-card:hover .service-icon {
+.feature-card:hover .feature-icon {
     background: var(--primary-color);
-    color: white;
+    color: #fff;
     transform: scale(1.1);
 }
 
-.service-card h3 {
+.feature-card h3 {
     font-size: 1.4rem;
     color: var(--dark-color);
     margin-bottom: 1rem;
     text-align: center;
     position: relative;
     padding-bottom: 0.8rem;
+    font-weight: 600;
 }
 
 .service-card h3::after {
