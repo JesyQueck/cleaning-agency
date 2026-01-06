@@ -406,16 +406,19 @@ ul {
 
 .about-content .section-title {
     color: var(--dark-color);
-    margin-bottom: 1.5rem;
+    margin: 0 auto 2rem;
     position: relative;
-    display: inline-block;
+    display: block;
+    text-align: center;
+    width: fit-content;
 }
 
 .about-content .section-title::after {
     content: '';
     position: absolute;
     bottom: -10px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 60px;
     height: 3px;
     background: var(--primary-color);
@@ -453,16 +456,23 @@ ul {
 
 .about-card i {
     font-size: 2.5rem;
+    color: var(--white);
+    background: var(--primary-color);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
-    background: rgba(33, 150, 243, 0.1);
-    border-radius: 50%;
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    margin: 0 0 1rem 0;
-    transition: all 0.3s ease;
+    margin: 0 auto 1.5rem;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(59, 176, 189, 0.3);
+}
+
+.about-card:hover i {
+    transform: translateY(-5px) rotate(5deg);
+    background: var(--dark-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .feature:hover i {
@@ -620,7 +630,7 @@ ul {
 .service-features {
     list-style: none;
     padding: 0;
-    margin: 0 0 1.5rem 0;
+    margin: 1.5rem 0 1.5rem 0;
     flex-grow: 1;
 }
 
@@ -722,9 +732,11 @@ ul {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    margin: 2rem auto 0;
+    max-width: 1200px;
+    padding: 0 1.5rem;
 }
 
 .feature-card {
@@ -737,6 +749,8 @@ ul {
     display: flex;
     flex-direction: column;
     height: 100%;
+    align-items: center;
+    text-align: center;
 }
 
 .feature-card:hover {
@@ -781,17 +795,13 @@ ul {
 @media (max-width: 768px) {
     .features-grid {
         grid-template-columns: 1fr;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 100%;
+        padding: 0 1.5rem;
     }
     
     .feature-card {
         padding: 2rem 1.5rem;
-    }
-    
-    .feature-card h3 {
-        font-size: 1.2rem;
+        max-width: 100%;
     }
 }
 
@@ -1102,7 +1112,7 @@ ul {
     
     /* Adjust sidebar position to be below mobile header */
     .sidebar {
-        padding-top: 70px;
+        padding-top: 100px;
     }
     
     /* Hide original menu button */
