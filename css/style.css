@@ -239,7 +239,7 @@ ul {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://media.istockphoto.com/id/2203809252/photo/cleaning-person-looking-busy-while-cleaning-the-windows-in-the-office.jpg?s=612x612&w=0&k=20&c=2hkXUEiut4GK8uxLgVUqe7xx1exCnq7ngijSFCyhUpI=') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/bg.jpeg) no-repeat center center/cover;
     display: flex;
     align-items: center;
     color: white;
@@ -353,6 +353,35 @@ ul {
     color: var(--primary-color);
     font-size: 1.2rem;
     margin-top: 5px;
+}
+
+/* Contact Links Styling */
+.info-item a.contact-link {
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.info-item a.contact-link:hover {
+    color: var(--primary-color);
+}
+
+.info-item a.contact-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.info-item a.contact-link:hover::after {
+    width: 100%;
 }
 
 /* About Section - New Design */
